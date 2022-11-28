@@ -1,0 +1,33 @@
+opentelemetry-collector:
+  nameOverride: otelcol
+  mode: deployment
+  resources:
+    limits:
+      memory: 100Mi
+  service:
+    type: ClusterIP
+  config:
+
+    exporters:
+      otlp/http:
+        endpoint: "https://YOUR-APM-ENDPOINT-HERE:443"  
+        headers:
+          Authorization: "Bearer YOUR-APM-SECRET-TOKEN-HERE"  
+          
+    processors:
+      batch:
+
+    service:
+      pipelines:
+        traces:
+          receivers: [otlp]
+          processors: [batch]
+          exporters: [otlp/http]
+        metrics:
+          receivers: [otlp]
+          processors: [batch]
+          exporters: [otlp/http]
+        logs:
+          receivers: [otlp]
+          processors: [batch]
+          exporters: [otlp/http]
