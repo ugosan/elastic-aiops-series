@@ -2,6 +2,9 @@
 
 This demo shows how to implement AIOPS using the Elastic Stack, it is built on top of the [opentelemetry-demo](https://github.com/open-telemetry/opentelemetry-demo).
 
+
+<kbd><img src="screenshots/2022-11-28-13-34-10.png" width="640"></kbd>
+
 ## Prerequisites
 
 - An Elastic Deployment (we recommend using [Elastic Cloud](https://cloud.elastic.co))
