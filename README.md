@@ -3,7 +3,6 @@
 This demo shows how to implement AIOPS using the Elastic Stack, it is built on top of the [opentelemetry-demo](https://github.com/open-telemetry/opentelemetry-demo).
 
 
-<kbd><img src="screenshots/2022-11-28-13-34-10.png" width="640"></kbd>
 
 ## Prerequisites
 
@@ -12,7 +11,7 @@ This demo shows how to implement AIOPS using the Elastic Stack, it is built on t
 - [Helm](https://helm.sh/) 
 
 
-## Install the Chart
+## 1) APM: Deploy the opentelemetry demo
 
 Add OpenTelemetry Helm repository:
 
@@ -42,3 +41,11 @@ then run:
 ```shell
 helm upgrade aiops-demo open-telemetry/opentelemetry-demo -f values.yml     
 ```
+
+And wait for the data to come in
+
+<kbd><img src="screenshots/2022-11-28-13-34-10.png" width="640"></kbd>
+
+## 2) Infrastructure: Deploy the Elastic Agent
+
+Just install the Kubernetes Agent integration through Kibana and apply the manifest to the Kubernetes cluster.
