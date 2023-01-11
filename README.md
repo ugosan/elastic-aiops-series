@@ -1,4 +1,4 @@
-# Elastic AIOPS Demo
+# Elastic AIOPS 
 
 This demo shows how to implement AIOPS using the Elastic Stack, it is built on top of the [opentelemetry-demo](https://github.com/open-telemetry/opentelemetry-demo).
 
