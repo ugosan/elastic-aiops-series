@@ -1,3 +1,13 @@
+observability:
+  otelcol:
+    enabled: true
+  jaeger:
+    enabled: false
+  prometheus:
+    enabled: false
+  grafana:
+    enabled: false
+
 opentelemetry-collector:
   nameOverride: otelcol
   mode: deployment
